@@ -1,6 +1,6 @@
 input tradeSize = 1;
 
-def OpenPst = MACD()."Value"[-1] crosses above MACD()."Avg" and close is less than BollingerBands()[-1];
+def OpenPst = MACD()."Value"[-1] crosses above MACD()."Avg";
 
 AddOrder(OrderType.BUY_TO_OPEN, openPst, open[-1], tradeSize, Color.CYAN, Color.CYAN, Name = "ABUY");
 
